@@ -1,0 +1,197 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 72px;
+}
+
+body {
+  margin: 0;
+  background: var(--mv-ivory);
+  color: var(--mv-charcoal);
+  font-family: var(--mv-font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-family: var(--mv-font-display);
+  font-weight: 600;
+  color: var(--mv-navy);
+  text-wrap: balance;
+}
+
+p {
+  margin: 0;
+  text-wrap: pretty;
+}
+
+a {
+  color: var(--mv-teal);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--mv-teal);
+  outline-offset: 2px;
+}
+
+/* Shared layout helpers */
+.mv-container {
+  width: 100%;
+  max-width: var(--mv-container);
+  margin: 0 auto;
+  padding-left: var(--mv-gutter);
+  padding-right: var(--mv-gutter);
+}
+
+.mv-eyebrow {
+  font-family: var(--mv-font-body);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--mv-muted);
+}
+
+.mv-h2 {
+  font-weight: 500;
+  font-size: clamp(30px, 3.2vw, 40px);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.mv-section-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.mv-section-head > div {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Buttons */
+.mv-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  min-height: 44px;
+  padding: 0 20px;
+  border-radius: var(--mv-radius-btn);
+  border: 1px solid transparent;
+  font-family: var(--mv-font-display);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color var(--mv-ease), color var(--mv-ease), border-color var(--mv-ease),
+    transform var(--mv-ease);
+}
+.mv-btn:active {
+  transform: scale(0.98);
+}
+
+.mv-btn--primary {
+  background: var(--mv-teal);
+  color: var(--mv-white);
+}
+.mv-btn--primary:hover {
+  background: var(--mv-teal-hover);
+}
+
+.mv-btn--secondary {
+  background: var(--mv-white);
+  color: var(--mv-navy);
+  border-color: var(--mv-border);
+}
+.mv-btn--secondary:hover {
+  background: var(--mv-pale-mint);
+}
+
+.mv-btn--on-navy {
+  background: var(--mv-white);
+  color: var(--mv-navy);
+}
+.mv-btn--on-navy:hover {
+  background: var(--mv-pale-mint);
+}
+
+.mv-btn--ghost {
+  background: transparent;
+  color: var(--mv-white);
+  border-color: rgba(255, 255, 255, 0.35);
+}
+.mv-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.mv-btn--pill {
+  border-radius: var(--mv-radius-pill);
+  min-height: 40px;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.mv-btn--lg {
+  min-height: 48px;
+  padding: 0 24px;
+}
+
+/* Cards */
+.mv-card {
+  background: var(--mv-white);
+  border: 1px solid var(--mv-border);
+  border-radius: var(--mv-radius-card);
+  overflow: hidden;
+}
+
+.mv-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+/* One entrance on load: a short fade and rise */
+@keyframes mv-rise {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}

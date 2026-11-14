@@ -1,0 +1,48 @@
+/* MonVenue brand tokens — see "MonVenue Brand & UI Theme" */
+:root {
+  /* Primary */
+  --mv-navy: #0a2340;
+  --mv-navy-hover: #13304f;
+  --mv-teal: #007d70;
+  --mv-teal-hover: #006a5f;
+  --mv-mint: #00bfa5;
+
+  /* Supporting */
+  --mv-ivory: #fcfaf6;
+  --mv-white: #ffffff;
+  --mv-champagne: #d6b98a;
+  --mv-charcoal: #1c292f;
+  --mv-slate: #586865;
+  --mv-muted: #657370;
+  --mv-pale-mint: #e7f5f1;
+  --mv-border: #e1e9e6;
+  --mv-on-navy-muted: #c9d3dd;
+  --mv-on-navy-line: rgba(255, 255, 255, 0.14);
+
+  /* Type */
+  --mv-font-display: 'Manrope', 'Inter', system-ui, sans-serif;
+  --mv-font-body: 'Inter', system-ui, sans-serif;
+
+  /* Shape */
+  --mv-radius-card: 16px;
+  --mv-radius-btn: 12px;
+  --mv-radius-pill: 999px;
+  --mv-shadow-soft: 0 8px 24px rgba(10, 35, 64, 0.06);
+
+  /* Motion: one curve, a few durations */
+  --mv-curve: cubic-bezier(0.22, 1, 0.36, 1);
+  --mv-ease: 160ms var(--mv-curve);
+  --mv-enter: 480ms var(--mv-curve);
+
+  /* Layout */
+  --mv-container: 1280px;
+  --mv-gutter: 32px;
+  --mv-section: 96px;
+}
+
+@media (max-width: 640px) {
+  :root {
+    --mv-gutter: 20px;
+    --mv-section: 64px;
+  }
+}
